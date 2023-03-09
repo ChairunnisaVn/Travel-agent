@@ -243,7 +243,7 @@ header{
 }
 .our-package{
     position: absolute;
-    top: 2300px;
+    top: 2600px;
     left:0;
     width: 100%;
 }
@@ -296,7 +296,7 @@ header{
 }
 .call-us{
     position: absolute;
-    top: 3200px;
+    top: 3400px;
     width: 100%;
     margin-top: 50px;
 }
@@ -329,7 +329,7 @@ header{
 }
 footer{
     position: absolute;
-    top: 3600px;
+    top: 3800px;
     width: 100%;
     height: auto;
     border-top: 2px solid rgb(209, 200, 198, 0.3);

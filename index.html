@@ -9,97 +9,157 @@
 </head>
 <body>
     <header>
-        <nav class="navbar">
+        <section class="logo-navbar">
             <img src="assets/logo.png" alt="logo">
-            <div class="menu">
-                <a href="#home">Home</a>
-                <a href="#our-package">Our Package</a>
-                <a href="#call-us">Call Us</a>
-            </div>
-        </nav>
+        </section>
+        <section class="link-navbar">
+            <a href="#home">Home</a>
+            <a href="#our-package">Our Package</a>
+            <a href="#call-us">Call Us</a>
+        </section>
     </header>
     <main>
-        <section id="home">
-            <div class="container">
-                <div class="home-title">
-                    <h1>Your Trusted Travel Agent's</h1>
-                    <h3>Your happiness is our happiness</h3>
+        <section id="home-banner">
+            <div class="home-banner">
+                <div class="banner-slide">
+                    <img src="assets/banner2.jpg" alt="">
                 </div>
+                <div class="banner-slide">
+                    <img src="assets/banner5.jpg" alt="">
+                </div>
+                <div class="banner-slide">
+                    <img src="assets/banner8.jpg" alt="">
+                </div>
+                <div class="banner-slide">
+                    <img src="assets/banner9.jpg" alt="">
+                </div>
+                <div class="banner-slide">
+                    <img src="assets/banner11.jpg" alt="">
+                </div> 
+                <script>
+                    var slideIndex = 1;
+                    showDivs(slideIndex);
+
+                    function plusDivs(n){
+                        showDivs(slideIndex += n);
+                    }
+
+                    function showDivs(n){
+                        var i;
+                        var x = document.getElementsByClassName("banner-slide");
+                        if ( n > x.length ) {slideIndex=1}
+                        else if (n < 1) {slideIndex=x.length};
+                        
+                        for (i = 0; i < x.length; i++){
+                            x[i].style.display = "none";
+                        }
+
+                        x[slideIndex - 1].style.display = "block";
+                    }
+
+                    setInterval(()=>{
+                        plusDivs(1);
+                    },2000);
+                </script>
+            </div>
+        </section>
+        <section id="home-title">
+            <div class="home-title">
+                <h1>Your Trusted Travel Agent's</h1>
+                <h3>Your happiness is our happiness</h3>
             </div>
         </section>
         <section id="about-contact">
-            <div id="about-content">
+            <div class="about-content">
                 <div class="about">
-                    <img src="assets/scene2.jpg" alt="scene">
-                    <p>" Liburan jadi menyenangkan bersama travel agenku "</p>
-                </div>
-                <div class="about-person">
-                    <div class="content-person">
-                        <img src="assets/profil1.jpg" alt="profil">
-                        <div class="person-info">
-                            <h4>Vincent Hughes</h4>
-                            <p>Frontend developer, 25</p>
-                        </div>
+                    <div class="about-img">
+                        <img src="assets/scene3.jpg" alt="scene">
+                        <p>" Holidays are fun with my travel agent "</p>
                     </div>
-                    <hr class="hr">
-                </div>
-                <div class="about-information">
-                    <h3>Use this space to provide users with more information about your offer. Consider it a follow-up to your headline and explain the benefits of your service or product</h3>
-                    <ul>
-                        <li>
-                            <div class="list-member">1</div>
-                            <div class="list-content">
-                                <p>Your first feature, written in the form of a benefit statement</p>
+                    <div class="about-person">
+                        <div class="content-person">
+                            <img src="assets/profil1.jpg" alt="profil">
+                            <div class="person-info">
+                                <h4>Vincent Hughes</h4>
+                                <p>Frontend developer, 25</p>
                             </div>
-                        </li>
-                        <li>
-                            <div class="list-member">2</div>
-                            <div class="list-content">
-                                <p>Your second feature, written in the form of a benefit statement</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="list-member">3</div>
-                            <div class="list-content">
-                                <p>Your third feature, written in the form of a benefit statement</p>
-                            </div>
-                        </li>
-                    </ul>
+                        </div>
+                        <hr class="hr">
+                    </div>
+                    <div class="about-information">
+                        <h3>VnCent agents are experienced and have served customers for the last 10 years. Here are some of the benefits that you can get by using this agent:</h3>
+                        <ul>
+                            <li>
+                                <div class="list-member">1</div>
+                                <div class="list-content">
+                                    <p>Good and professional service. During the process, customers will receive good and friendly service.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="list-member">2</div>
+                                <div class="list-content">
+                                    <p>Fast and responsible response. Our travel agents can be contacted anytime and anywhere and are responsible for every travel process.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="list-member">3</div>
+                                <div class="list-content">
+                                    <p>Providing experienced agents. our agents have received certified training so and have experience as a travel agent.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="contact-content">
-                <div class="contact-title">
-                    <h2>Contact Us</h2>
-                </div>
-                <div class="contact-description">
-                    <p>Sales akan menghubungi anda 1x24 jam setelah data kami terima.</p>
-                </div>  
-                <div class="contact-form">
-                    <div class="cf cf-name">
-                        <p>Your Name :</p>
-                        <input type="text" placeholder="  First and last name">
+                <div class="contact">
+                    <div class="contact-title">
+                        <h2>Contact Us</h2>
                     </div>
-                    <div class="cf cf-email">
-                        <p>Email Address :</p>
-                        <input type="email" name="email" id="email" placeholder="  example@gmail.com">
-                    </div>
-                    <div class="cf cf-interested">
-                        <p>What are you interested in ?</p>
-                        <select name="select" id="select">
-                            <option value="#"> Select option</option>
-                            <option value="1"> aaaaaaa</option>
-                            <option value="2"> bbbbbbb</option>
-                            <option value="3"> ccccccc</option>
-                        </select>
-                    </div><br><br>
-                    <div class="submit">
-                        <input type="submit" value="SEND" name="SEND">
+                    <div class="contact-description">
+                        <p>Sales will contact you 1x24 hours after we receive the data.</p>
+                    </div>  
+                    <div class="contact-form">
+                        <script>
+                            function validateForm() 
+                            {
+                                if( document.myForm.Name.value == "" ) {
+                                    alert( "Please provide your Name !" );
+                                    document.myForm.Name.focus() ;
+                                    return false;
+                                }
+                                else if( document.myForm.Email.value == "" ) {
+                                    alert( "Please provide your Email !" );
+                                    document.myForm.EMail.focus() ;
+                                    return false;
+                                }
+                            }
+                         </script>
+                        <form action="" name="myForm" onsubmit="return validateForm()">
+                            <p>Your Name :</p>
+                            <input type="text" placeholder="  First and last name" name="Name">
+                            <p>Email Address :</p>
+                            <input type="email" name="Email" id="email" placeholder="  example@gmail.com">
+                            <div class="cf cf-interested">
+                                <p>What are you interested in ?</p>
+                                <select name="select" id="select" required>
+                                    <option value=""> Select option</option>
+                                    <option value="1"> Travelling</option>
+                                    <option value="2"> Reading</option>
+                                    <option value="3"> photography</option>
+                                </select>
+                            </div><br><br>
+                            <div class="submit">
+                                <input type="submit" value="SEND" name="submit">
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </section>
         <section id="our-package">
-            <div class="container">
+            <div class="our-package">
                 <div class="op-title">
                     <h1>Our Package</h1>
                 </div>
@@ -110,7 +170,7 @@
                         </div>
                         <div class="p-description">
                             <h5>Bali</h5>
-                            <p>Travel dan wisata di Bali. Kunjungi cagar budaya dan kuliner yang menarik.</p>
+                            <p>Travel to Bali and discover Indonesia's beautiful island escape. Dotted with small, character-filled villages, smouldering volcanoes rising out of lush rich fields, idyllic beaches and colourful reefs, Bali is the perfect island getaway. </p>
                         </div>
                     </div>
                     <div class="place japan">
@@ -119,7 +179,7 @@
                         </div>
                         <div class="p-description">
                             <h5>Japan</h5>
-                            <p>Travel dan wisata di Jepang. Kunjungi cagar budaya dan kuliner yang menarik.</p>
+                            <p>There is a certain allure to Japan – a place where eastern tradition and western modernity collide amongst otherworldly sights that will take your breath away.</p>
                         </div>
                     </div>
                     <div class="place Singapore">
@@ -128,7 +188,7 @@
                         </div>
                         <div class="p-description">
                             <h5>Singapore</h5>
-                            <p>Travel dan wisata di Singapura. Kunjungi cagar budaya dan kuliner yang menarik.</p>
+                            <p>With a thriving retail hub, thriving cross-cultural dining scene and one of the world's best airports, this is what makes Singapore one of our holiday destinations.</p>
                         </div>
                     </div>
                 </div><br>
@@ -139,8 +199,8 @@
                             <img src="assets/icon_star.png" alt="icon_star">
                         </div>
                         <div class="p-description">
-                            <h5>Bandung</h5>
-                            <p>This description supports and extends the bullet point above</p>
+                            <h5>Canada</h5>
+                            <p>The changing colours of forested valleys and national parks, the freeze and flow of glacial lakes, the light and shade of the Rockies’ snow-capped mountains – Canada is North America’s natural masterpiece.</p>
                         </div>
                     </div>
                     <div class="place surabaya">
@@ -148,8 +208,8 @@
                             <img src="assets/icon_star.png" alt="icon_star">
                         </div>
                         <div class="p-description">
-                            <h5>Surabaya</h5>
-                            <p>This description supports and extends the bullet point above</p>
+                            <h5>South Korea</h5>
+                            <p>A melting pot of natural wonder, culinary delights and mesmerizing cityscapes, South Korea is proving itself as a destination well and truly worth adding to your travel list.</p>
                         </div>
                     </div>
                     <div class="place feature">
@@ -157,20 +217,20 @@
                             <img src="assets/icon_star.png" alt="icon_star">
                         </div>
                         <div class="p-description">
-                            <h5>Third Feature</h5>
-                            <p>This description supports and extends the bullet point above</p>
+                            <h5>Thailand</h5>
+                            <p>Thailand is an idyllic paradise, where jungle-covered karsts plunge into aquamarine waters and the sand is sugar white.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <section id="call-us">
-            <div class="container">
+            <div class="call-us">
                 <div class="cu-title">
-                    <h1>Your closing Argument Headline</h1>
+                    <h1>Have a question and need help ?</h1>
                 </div>
                 <div class="cu-desc">
-                    <p>Suspendisse egestas rhoncus urna in bibendum. Donec urna neque, euismod sed justo quis, covallis tincidunt risus. Phasellus fringilla odio vel erat fringilla.</p>
+                    <p>Don't hesitate to contact us. we are always ready to respond and help you</p>
                 </div>
                 <input type="submit" value="CALL TO ACTION" name="CALL TO ACTION">
             </div>

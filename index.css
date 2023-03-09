@@ -353,9 +353,9 @@ footer p{
     text-align: center;
     color: gray;
 }
-/* layar mobile 600px*/
+/* layar mobile*/
 
-@media only screen and (max-width:600px) {
+@media only screen and (width:320px) {
     body{
         position: absolute;
         top:0;
@@ -363,9 +363,25 @@ footer p{
         width: 100%;
     }
     header{
-        width: 600px;
+        width: 320px;
         left:0;
         right: 0;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap:10px;
+    }
+    .logo-navbar{
+        width: 100%;
+        height: 50px;
+        text-align: center;
+    }
+    .logo-navbar img{
+        margin-bottom: 20px;
+        width: 50px;
+        height: auto;
+        margin-left: 0px;
     }
     .link-navbar{
         margin-right: 0px;
@@ -373,83 +389,185 @@ footer p{
     }
     #about-contact{
         flex-direction: column;
+        justify-content: center;
     }
     .about-content{
         width: 100%;
         margin-bottom: 100px;
     }
-    .contact-content{
-        width: 100%;
-        padding: 0;
+    .contact-content
+    {  
+        height:auto;
+        width: auto;
+        padding:0;
     }
     .contact{
-        padding:50px;
-        position: absolute;
-        width: 500px;
-        display: block;
-        margin: auto;
-        right: 0;
-        left: 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0px;
+    }
+    .contact-title{
+        font-size: 20px;
+        text-align: center;
+        padding: 10px;
+        margin: 10px;
+    }
+    .contact-description p{
+        margin: 10px;
+        text-align: center;
+        color:gray;
     }
     .contact-form input, .cf-interested select{
-        width:100%;
+        width: 300px;
         height:50px;
-        margin-bottom: 20px;
+        margin:auto;
     }
+    .contact-form p{
+        text-align: left;
+        margin: 10px 5px;
+    }
+    .contact-form input{
+        border: 0.5px solid gray;
+        border-radius: 5px;
+    }
+    .cf-interested option{
+        color:gray;
+    }
+
     .submit input{
+        display: block;
+        background-color: rgb(45, 64, 73);
+        color:white;
+        border: 0.5px solid gray;
+        border-radius: 5px;
         width: 100%;
+        height: auto;
+        padding:20px;
+        margin: auto;
     }
     .our-package{
-        top:2800px;
+        position: absolute;
+        top: 2700px;
+        left:0;
         width: 100%;
     }
     .op-title h1{
-        font-size: 40px;
         width:100%;
+        font-size: 30px;
+        height: 50px;
+        background-color: rgba(228, 228, 228, 0.418);
+        text-align: center;
         margin-bottom: 50px;
-        padding:50px 0;
+        padding:70px 0;
     }
     .package-content1, .package-content2{
         display:flex;
         flex-direction: column;
-        justify-content: center;
-        margin:0;
+        justify-content: space-between;
+        margin: 0px;
     }
     .place{
         width: 100%;
         height: auto;
-        padding: 20px;
-        margin: 0;
+        padding: 0;
+        margin:  0;
         display: flex;
         flex-direction: row;
-        gap:0px;
+        gap:5px;
     }
-    .p-description{
-        width: 600px;
-        padding: 0px;
+    .iconl{
+        width: 20%;
+        height:auto; 
     }
     .iconl img{
-        width: 40px;
+        width: 50px;
         height:auto;
         border-radius: 50%;
         background-color: rgba(240, 233, 233, 0.418);
         padding-top:8px;
         padding-bottom: 8px;
     }
+    .p-description{
+        width: 80% ;
+    }
     .p-description h5{
         margin-top: 10px;
-        margin-bottom: 15px;
+        margin-bottom: 12px;
         font-size: 20px;
     }
     .p-description p{
         text-align: justify;
-        width: 500px;
+    }
+    .icons{
+        width: 20%;
+        height:auto; 
+    }
+    .icons img{
+        width: 25px;
+        height:auto;
+        border-radius: 50%;
+        background-color: rgba(240, 233, 233, 0.418);
+        padding:8px;
     }
     .call-us{
-        top: 4050px;
+        position: absolute;
+        top: 3900px;
+        width: 100%;
+        margin-top: 50px;
+    }
+    .cu-title h1{
+        font-size: 25px;
+        height: 50px;
+        text-align: center;
+        margin:20px;
+    }
+    .cu-desc{
+        display: block;
+        width: 100%;
+        padding-bottom: 50px;
+        margin: auto;
+    }
+    .cu-desc p{
+        text-align: center;
+        color: gray;
+    }
+    #call-us input{
+        display: block;
+        background-color: rgb(45, 64, 73);
+        color:white;
+        border: 0.5px solid gray;
+        border-radius: 3px;
+        width: 150px;
+        height: auto;
+        padding:20px;
+        margin: auto;
     }
     footer{
-        top: 4500px;
+        position: absolute;
+        top: 4300px;
+        width: 100%;
+        height: auto;
+        border-top: 2px solid rgb(209, 200, 198, 0.3);
+    }
+    footer img{
+        padding: 20px;
+        display: block;
+        width: 80px;
+        height: 80px;
+        margin: auto;
+    }
+    .footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        color: gray;
+    }
+    footer p{
+        padding-bottom: 50px;
+        text-align: center;
+        color: gray;
     }
 }
 
